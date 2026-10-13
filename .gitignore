@@ -14,6 +14,3 @@ env/
 
 # OS
 .DS_Store
-
-# Generated reports
-reports/output/
