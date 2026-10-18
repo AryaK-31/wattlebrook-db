@@ -1,5 +1,7 @@
 # Wattlebrook University Governed Data Platform
 
+[![Watch the Group 2 Wattlebrooke university shadow data demo](https://img.youtube.com/vi/_rLFbb1bO5Y/0.jpg)](https://www.youtube.com/watch?v=_rLFbb1bO5Y)
+
 A small PostgreSQL prototype that fixes the four problems from Assignment 1:
 
 | Problem | What the prototype does | Where |
