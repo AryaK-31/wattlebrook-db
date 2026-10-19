@@ -1,4 +1,13 @@
 services:
+  cloudbeaver:
+    container_name: cloudbeaver
+    image: dbeaver/cloudbeaver:latest
+    restart: unless-stopped
+    ports:
+      - "8978:8978"
+    volumes:
+      - cloudbeaver_data:/opt/cloudbeaver/workspace
+
   postgres:
     image: postgres:16-alpine
     container_name: wbu_postgres_db
@@ -14,7 +23,7 @@ services:
 
     volumes:
       - pgdata:/var/lib/postgresql/data
-
+ 
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 5s
@@ -23,3 +32,5 @@ services:
 
 volumes:
   pgdata:
+  cloudbeaver_data:
+    driver: local
